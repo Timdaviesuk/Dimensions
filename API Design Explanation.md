@@ -1,6 +1,6 @@
 ---
 created: 2020-12-05T08:08:06+00:00
-modified: 2020-12-05T08:20:49+00:00
+modified: 2020-12-05T14:15:23+00:00
 ---
 
 # API Design Explanation
@@ -23,4 +23,15 @@ However, it may make more sense for there to be an additional "annotation" prope
 
 I am wary of over complicating the specification at this early stage.
 
-##
+## Explicit vs parameter driven dimension style
+The specification explicitly defines different the extension lines
+
+## Value 
+
+## Dimension as a grouping object
+The simplest measurement is between two objects, however, to accommodate continuous, cumulative (chain), and baseline dimensions, there needs to be a grouping mechanism.
+
+Therefore a dimension has a GUID, and array of dimension segments. Each segment is made of two
+
+## Model geometry referencing
+In the current IFC Schema there is no stable reference to a piece of geometry. As such, this specification only allows
