@@ -1,6 +1,6 @@
 ---
 created: 2020-12-05T08:08:06+00:00
-modified: 2020-12-05T14:20:55+00:00
+modified: 2020-12-05T15:58:41+00:00
 ---
 
 # API Design Explanation
@@ -23,10 +23,8 @@ However, it may make more sense for there to be an additional "annotation" prope
 
 I am wary of over complicating the specification at this early stage.
 
-## Explicit vs parameter driven dimension style
-The specification explicitly defines different the extension lines
-
 ## Value 
+Each dimension segment includes a 
 
 ## Dimension as a grouping object
 The simplest measurement is between two objects, however, to accommodate continuous, cumulative (chain), and baseline dimensions, there needs to be a grouping mechanism.
@@ -38,4 +36,9 @@ Possibly each DimensionSegment could have a GUID too.
 ## Model geometry referencing
 In the current IFC Schema there is no stable reference to a piece of geometry. As such, this specification only allows referencing an entire IFC object.
 
-However, the originating_geometry_ref property allows tools to save a string, which could be a reference to internal, native geometry. This is to enable better round tripping, and also leaves open the possibility of referencing IFC geometry in the future.
+However, the originating_geometry_ref property allows tools to save a string, which could be a reference to an internal, native geometry id. This is to enable better round tripping, and also leaves open the possibility of referencing IFC geometry in the future.
+
+## Easier to read than to write
+The approach of explicitly defining the dimension and extension lines is based on the principal that they should be easy for a tool to read and display in a viewer.
+
+The onerous on calculating is for tools that would create the dimensions in the first place.
