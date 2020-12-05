@@ -1,6 +1,6 @@
 ---
 created: 2020-12-04T16:09:30+00:00
-modified: 2020-12-05T07:24:42+00:00
+modified: 2020-12-05T14:16:21+00:00
 ---
 
 # BCF
@@ -40,7 +40,8 @@ Retrieve a **collection** of all dimensions in a viewpoint.
                     "start_geometry": {
                         "ifc_guid": "",
                         "type": ("point", "line", "plane"),
-                        "geometry": (point, line, plane)
+                        "geometry": (point, line, plane),
+                        "originating_geometry_ref": ""
                     }
                     "start_extension_line": Line
                     "end_extension_line": Line
