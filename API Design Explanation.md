@@ -1,6 +1,6 @@
 ---
 created: 2020-12-05T08:08:06+00:00
-modified: 2020-12-05T15:58:41+00:00
+modified: 2020-12-05T23:40:46+00:00
 ---
 
 # API Design Explanation
@@ -24,14 +24,18 @@ However, it may make more sense for there to be an additional "annotation" prope
 I am wary of over complicating the specification at this early stage.
 
 ## Value 
-Each dimension segment includes a 
+Each dimension segment includes a value parameter. It is recommended that tools calculate the dimension line length and compare it to this value to ensure they match. This to ensure that a change hasn't been made to one property but not the other.
+
+Tools should not just show this value directly.
+
+However, this could be abused to the point that people over ride dimension values. I believe this is undesirable so it may be worth removing the "value" property.
 
 ## Dimension as a grouping object
 The simplest measurement is between two objects, however, to accommodate continuous, cumulative (chain), and baseline dimensions, there needs to be a grouping mechanism.
 
 Therefore a dimension has a GUID, and array of dimension segments. Each segment is made of two.
 
-Possibly each DimensionSegment could have a GUID too.
+Possibly each DimensionSegment could have a GUID too. Worth considering.
 
 ## Model geometry referencing
 In the current IFC Schema there is no stable reference to a piece of geometry. As such, this specification only allows referencing an entire IFC object.
