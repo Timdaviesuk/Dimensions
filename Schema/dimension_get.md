@@ -3,14 +3,12 @@ created: 2020-12-04T16:09:30+00:00
 modified: 2020-12-05T14:16:21+00:00
 ---
 
-# BCF
+# dimension_get.md
 
 ### New objects
 dimension.json
 dimension_segment.json
 dimension_geometry.json
-face.json
-
 
 ### 4.5.9 GET Dimensions Service
 **Resource URL**
@@ -32,24 +30,18 @@ Retrieve a **collection** of all dimensions in a viewpoint.
     {
         "dimension": [
             {
-                "guid": "2MF28NhmDBiRVyFakgdbCT",
+                "guid": "7017a373-8a7e-4625-8436-b06a0909108c",
                 "originating_system": "Example CAD Application",
-                "authoring_tool_id": "EXCAD/v1.0"
+                "authoring_tool_id": "EXCAD/v1.0",
                 "segments" : [{
-                    "color": (rgb, like coloured objects)
-                    "start_geometry": {
-                        "ifc_guid": "",
-                        "type": "line",
-                        "geometry": {
-                            
-                        },
-                        "originating_geometry_ref": ""
-                    }
-                    "start_extension_line": Line
-                    "end_extension_line": Line
-                    "end_geometry": {}
+                    "guid": "f9e028b1-f112-422a-8255-b0b0d231b40b",
+                    "color": "",
+                    "dimension_line": {},
+                    "start_extension_line": {},
+                    "end_extension_line": {},
+                    "end_geometry": {},
+                    "start_geometry": {},
                     "value": 1000,
-                    "dimension_line": Line
                 ]
             },
         ]
