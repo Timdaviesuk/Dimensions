@@ -39,8 +39,10 @@ Retrieve a **collection** of all dimensions in a viewpoint.
                     "color": (rgb, like coloured objects)
                     "start_geometry": {
                         "ifc_guid": "",
-                        "type": ("point", "line", "plane"),
-                        "geometry": (point, line, plane),
+                        "type": "line",
+                        "geometry": {
+                            
+                        },
                         "originating_geometry_ref": ""
                     }
                     "start_extension_line": Line

@@ -1,0 +1,31 @@
+{
+  "title": "dimension_segment",
+  "type": ["object", "null"],
+  "properties": {
+    "guid": {
+      "required": true,
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "start_geometry": {
+      "$ref": "dimension_geometry.json"
+    },
+    "end_geometry": {
+      "$ref": "dimension_geometry.json"
+    },
+    "start_extension_line": {
+      "$ref": "line.json"
+    },
+    "end_extension_line": {
+      "$ref": "line.json"
+    },
+    "dimension_line": {
+      "$ref": "line.json"
+    },
+    "value": {
+      "$ref": "number"
+    }
+  }
+}

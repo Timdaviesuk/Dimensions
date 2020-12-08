@@ -1,0 +1,25 @@
+{
+  "title": "dimension_geometry",
+  "type": ["object", "null"],
+  "properties": {
+    "component": {
+      "required": true,
+      "$ref": "component.json"
+    },
+    "type": {
+      "required": true,
+      "type": "string",
+      "enum": ["point", "line", "plane"],
+    },
+    "geometry": {
+      "oneOf": [
+        {"$ref": "point.json"},
+        {"$ref": "line.json"},
+        {"$ref": "clipping_plane.json"}
+      ]
+    },
+    "authoring_tool_geometry": {
+      "type": ["string", "null"]
+    }
+  }
+}
