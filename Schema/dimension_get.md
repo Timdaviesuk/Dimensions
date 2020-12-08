@@ -15,7 +15,7 @@ dimension_geometry.json
 
     GET /bcf/{version}/projects/{project_id}/topics/{guid}/viewpoints/{guid}/dimensions
 
-[dimensions_GET.json](Schemas_draft-03/Collaboration/Viewpoint/dimension_GET.json)
+[dimensions_GET.json](dimension.json)
 
 Retrieve a **collection** of all dimensions in a viewpoint.
 
@@ -28,21 +28,48 @@ Retrieve a **collection** of all dimensions in a viewpoint.
     Response Code: 200 - OK
     Body:
     {
-        "dimension": [
+        "dimensions": [
             {
-                "guid": "7017a373-8a7e-4625-8436-b06a0909108c",
-                "originating_system": "Example CAD Application",
-                "authoring_tool_id": "EXCAD/v1.0",
-                "segments" : [{
-                    "guid": "f9e028b1-f112-422a-8255-b0b0d231b40b",
-                    "color": "",
-                    "dimension_line": {},
-                    "start_extension_line": {},
-                    "end_extension_line": {},
-                    "end_geometry": {},
-                    "start_geometry": {},
+                "dimension_type": "Continuous",
+                "guid": "1c3c4d9a-9c36-48f9-a564-d85455a097c2",
+                "originating_system": "DimTool",
+                "authoring_tool_id": "2566",
+                "dimension_segments" : [{
+                    "guid": "f7ba6797-ec80-4fd2-be63-29068501a3e0",
+                    "color": "#FFFFFF00",
                     "value": 1000,
+                    "start_extension_line": {
+                        "start_point": { "x": 0, "y": 0, "z": 0},
+                        "end_point": { "x": 0, "y": 0, "z": 1000}
+                    },
+                    "end_extension_line": {
+                        "start_point": { "x": 1000, "y": 0, "z": 0},
+                        "end_point": { "x": 1000, "y": 0, "z": 1000}
+                    },
+                    "dimension_line": {
+                        "start_point": { "x": 0, "y": 0, "z": 1000},
+                        "end_point": { "x": 1000, "y": 0, "z": 1000}
+                    },
+                    "start_geometry": {
+                        "component": {
+                            "ifc_guid": "1E8YkwPMfB$h99jtn_uAjI"
+                        },
+                        "geometry_type": "Point",
+                        "geometry": { "x": 0, "y": 0, "z": 0},
+                        "authoring_tool_geometry_id": "2a4iof4:4a4ggts:44r4rr4"
+                    },
+                    "end_geometry": {
+                        "component": {
+                            "ifc_guid": "1mrgg_O_bBBv_tvdtVwK59"
+                        },
+                        "geometry_type": "Line",
+                        "geometry": {
+                            "start_point": { "x": 1000, "y": 0, "z": -1000},
+                            "end_point": { "x": 1000, "y": 0, "z": 5000}
+                        },
+                        "authoring_tool_geometry_id": "8n3mobg:mf894jk:fnw035f"
+                    }
                 ]
-            },
+            }
         ]
     }
