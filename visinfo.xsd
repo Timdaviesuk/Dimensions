@@ -207,7 +207,7 @@
             <xs:element name="AuthoringToolId" type="NonEmptyOrBlankString"/>
             <xs:element name="DimensionSegments" type="DimensionSegments" maxOccurs="unbounded"/>
         </xs:sequence>
-        
+
         <!-- Guid of the Dimension -->
         <xs:attribute name="Guid" type="Guid" use="required"/>
     </xs:complexType>
@@ -245,13 +245,17 @@
         <xs:sequence>
             <xs:element name="Component" type="Component"/>
             <xs:element name="GeometryType" type="GeometryType"/>
-            <xs:choice>
-                <xs:element name="Point" type="Point"/>
-                <xs:element name="Line" type="Line"/>
-                <xs:element name="Plane" type="Plane"/>
-            </xs:choice>
+            <xs:element name="Geometry" type="Geometry"/>
             <xs:element name="AuthoringToolGeometryId" type="NonEmptyOrBlankString"/>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Geometry">
+        <xs:choice>
+            <xs:element name="Point" type="Point"/>
+            <xs:element name="Line" type="Line"/>
+            <xs:element name="Plane" type="Plane"/>    
+        </xs:choice>
     </xs:complexType>
 
     <xs:simpleType name = "GeometryType">
