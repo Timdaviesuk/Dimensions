@@ -77,11 +77,9 @@ With there being no IFC schema for dimensions, there is very little semantic int
 It also appears that vendors are struggling to understand the real world requirements for dimensions as very few tools allow for sufficient types of required dimensions to be taken.
 
 ## Proposal to extend BCF
-Contrary to popular belief, BCF is not just about issue management. The BCF documentation describes it as a "format that is used to exchange topics, such as, issues, scenes, etc.".
-
 BCF could be used to exchange a topic such as a "Work Pack", which would include multiple viewpoints of filtered parts of a model and dimensions so that a labourer could build directly from the model.
 
-It is proposed that the BCF schema is best candidate to be extended to allow dimensions to be stored because it has all the required management capabilities already built in.
+It is proposed that the BCF schema is best candidate to be extended to allow dimensions to be stored because it has all the required management capabilities already built in, as well as many existing implementations.
 
 The WIP technical schema proposal is here: [Dimension Schema](Schema/visinfo.xsd)
 
