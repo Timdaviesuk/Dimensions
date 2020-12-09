@@ -249,7 +249,7 @@
                 <xs:element name="Line" type="Line"/>
                 <xs:element name="Plane" type="ClippingPlane"/>    
             </xs:choice>
-            <xs:element name="AuthoringToolGeometryId" type="NonEmptyOrBlankString"/>
+            <xs:element name="GeometryId" type="GeometryId"/>
         </xs:sequence>
     </xs:complexType>
 

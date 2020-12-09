@@ -13,7 +13,7 @@
         {"$ref": "clipping_plane.json"}
       ]
     },
-    "authoring_tool_geometry_id": {
+    "geometry_id": {
       "type": ["string", "null"]
     }
   }

@@ -71,7 +71,7 @@
                             <Y>0</Y>
                             <Z>1000</Z>
                         </Point>
-                        <AuthoringToolGeometryId>2a4iof4:4a4ggts:44r4rr4</AuthoAuthoringToolGeometryIdringToolId>
+                        <GeometryId>2a4iof4:4a4ggts:44r4rr4</GeometryId>
                     </StartGeometry>
                     <EndGeometry>
                         <Component IfcGuid="1mrgg_O_bBBv_tvdtVwK59"></Component>
@@ -87,7 +87,7 @@
                                 <Z>5000</Z>
                             </EndPoint>
                         </Line>
-                        <AuthoringToolGeometryId>8n3mobg:mf894jk:fnw035f</AuthoAuthoringToolGeometryIdringToolId>
+                        <GeometryId>8n3mobg:mf894jk:fnw035f</GeometryId>
                     </EndGeometry>
                 </DimensionSegment>
             </DimensionSegments>

@@ -55,7 +55,7 @@ Retrieve a **collection** of all dimensions in a viewpoint.
                             "ifc_guid": "1E8YkwPMfB$h99jtn_uAjI"
                         },
                         "point": { "x": 0, "y": 0, "z": 0},
-                        "authoring_tool_geometry_id": "2a4iof4:4a4ggts:44r4rr4"
+                        "geometry_id": "2a4iof4:4a4ggts:44r4rr4"
                     },
                     "end_geometry": {
                         "component": {
@@ -65,7 +65,7 @@ Retrieve a **collection** of all dimensions in a viewpoint.
                             "start_point": { "x": 1000, "y": 0, "z": -1000},
                             "end_point": { "x": 1000, "y": 0, "z": 5000}
                         },
-                        "authoring_tool_geometry_id": "8n3mobg:mf894jk:fnw035f"
+                        "geometry_id": "8n3mobg:mf894jk:fnw035f"
                     }
                 ]
             }
