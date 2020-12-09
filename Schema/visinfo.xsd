@@ -203,8 +203,8 @@
     <xs:complexType name="Dimension">
         <xs:sequence>
             <xs:element name="DimensionType" type="DimensionType" />
-            <xs:element name="OriginatingSystem" type="NonEmptyOrBlankString"/>
-            <xs:element name="AuthoringToolId" type="NonEmptyOrBlankString"/>
+            <xs:element name="OriginatingSystem" type="NonEmptyOrBlankString" minOccurs="0"/>
+            <xs:element name="AuthoringToolId" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="DimensionSegments" type="DimensionSegments" maxOccurs="unbounded"/>
         </xs:sequence>
 
@@ -228,13 +228,13 @@
 
     <xs:complexType name="DimensionSegment">
         <xs:sequence>
-            <xs:element name="Color" type="Color"/>
-            <xs:element name="StartGeometry" type="DimensionGeometry"/>
-            <xs:element name="EndGeometry" type="DimensionGeometry"/>
-            <xs:element name="StartExtensionLine" type="Line"/>
-            <xs:element name="EndExtensionLine" type="Line"/>
-            <xs:element name="DimensionLine" type="Line"/>
+            <xs:element name="Color" type="Color" minOccurs="0"/>
             <xs:element name="Value" type="decimal"/>
+            <xs:element name="StartExtensionLine" type="Line" minOccurs="0"/>
+            <xs:element name="EndExtensionLine" type="Line" minOccurs="0"/>
+            <xs:element name="DimensionLine" type="Line"/>
+            <xs:element name="StartGeometry" type="DimensionGeometry" minOccurs="0"/>
+            <xs:element name="EndGeometry" type="DimensionGeometry" minOccurs="0"/>
         </xs:sequence>
 
         <!-- Guid of the Dimension Segment -->
@@ -244,33 +244,18 @@
     <xs:complexType name="DimensionGeometry">
         <xs:sequence>
             <xs:element name="Component" type="Component"/>
-            <xs:element name="GeometryType" type="GeometryType"/>
-            <xs:element name="Geometry" type="Geometry"/>
+            <xs:choice>
+                <xs:element name="Point" type="Point"/>
+                <xs:element name="Line" type="Line"/>
+                <xs:element name="Plane" type="ClippingPlane"/>    
+            </xs:choice>
             <xs:element name="AuthoringToolGeometryId" type="NonEmptyOrBlankString"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Geometry">
-        <xs:choice>
-            <xs:element name="Point" type="Point"/>
-            <xs:element name="Line" type="Line"/>
-            <xs:element name="Plane" type="Plane"/>    
-        </xs:choice>
-    </xs:complexType>
-
-    <xs:simpleType name = "GeometryType">
-        <xs:restriction base = "xsd:string">
-            <xs:enumeration value = "Point"/>
-            <xs:enumeration value = "Line"/>
-            <xs:enumeration value = "ClippingPlane"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-
     <!--
     Dimension proposal ends here
     -->
-
 
     <xs:complexType name="ClippingPlane">
         <xs:sequence>

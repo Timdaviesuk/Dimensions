@@ -66,18 +66,16 @@
                     </DimensionLine>
                     <StartGeometry>
                         <Component IfcGuid="1E8YkwPMfB$h99jtn_uAjI"></Component>
-                        <GeometryType>Point</GeometryType>
-                        <Geometry>
+                        <Point>
                             <X>0</X>
                             <Y>0</Y>
                             <Z>1000</Z>
-                        </Geometry>
+                        </Point>
                         <AuthoringToolGeometryId>2a4iof4:4a4ggts:44r4rr4</AuthoAuthoringToolGeometryIdringToolId>
                     </StartGeometry>
                     <EndGeometry>
                         <Component IfcGuid="1mrgg_O_bBBv_tvdtVwK59"></Component>
-                        <GeometryType>Line</GeometryType>
-                        <Geometry>
+                        <Line>
                             <StartPoint>
                                 <X>1000</X>
                                 <Y>0</Y>
@@ -88,7 +86,7 @@
                                 <Y>0</Y>
                                 <Z>5000</Z>
                             </EndPoint>
-                        </Geometry>
+                        </Line>
                         <AuthoringToolGeometryId>8n3mobg:mf894jk:fnw035f</AuthoAuthoringToolGeometryIdringToolId>
                     </EndGeometry>
                 </DimensionSegment>

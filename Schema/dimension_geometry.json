@@ -6,11 +6,6 @@
       "required": true,
       "$ref": "component.json"
     },
-    "type": {
-      "required": true,
-      "type": "string",
-      "enum": ["point", "line", "plane"],
-    },
     "geometry": {
       "oneOf": [
         {"$ref": "point.json"},

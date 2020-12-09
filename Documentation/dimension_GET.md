@@ -54,16 +54,14 @@ Retrieve a **collection** of all dimensions in a viewpoint.
                         "component": {
                             "ifc_guid": "1E8YkwPMfB$h99jtn_uAjI"
                         },
-                        "geometry_type": "Point",
-                        "geometry": { "x": 0, "y": 0, "z": 0},
+                        "point": { "x": 0, "y": 0, "z": 0},
                         "authoring_tool_geometry_id": "2a4iof4:4a4ggts:44r4rr4"
                     },
                     "end_geometry": {
                         "component": {
                             "ifc_guid": "1mrgg_O_bBBv_tvdtVwK59"
                         },
-                        "geometry_type": "Line",
-                        "geometry": {
+                        "line": {
                             "start_point": { "x": 1000, "y": 0, "z": -1000},
                             "end_point": { "x": 1000, "y": 0, "z": 5000}
                         },
