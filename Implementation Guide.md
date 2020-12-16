@@ -1,6 +1,6 @@
 ---
 created: 2020-12-16T18:59:08+00:00
-modified: 2020-12-16T20:39:09+00:00
+modified: 2020-12-16T20:56:16+00:00
 ---
 
 # Implementation Guide
@@ -8,45 +8,30 @@ modified: 2020-12-16T20:39:09+00:00
 ## Saving dimensions
 Tools that create dimensions are encouraged to enter values into as many of the optional properties as possible, including dimension lines, extension lines, and dimension geometry.
 
-This makes the display of dimensions by other tools more accurate and easier to implement.
+This makes the display of dimensions by other tools easier to implement as they simply need to read explicitly defined coordinates.
 
 ## Displaying dimensions
 At its most basic, an implemention only needs to render a set lines and text values.
 
-At a more advanced level, if dimension geometry and associated properties are available, a viewing tool could ignore the explicit dimension lines and extension lines and display the measurements in creative ways.
+At a more advanced level, if dimension geometry and associated properties are available, a viewing tool can ignore the explicit dimension lines and extension lines and display the measurements in creative ways.
 
-Implementors are allowed and encouraged to be creative in the display of dimensions, as long as the dimension values and intended measurement are clear to the user.
+Implementors are allowed and encouraged to be creative in the display of dimensions, as long as the dimension values and intended measurements are clear and unambiguous to the user.
 
 ### Display of lines
 Lines are to the exact same specification as the pre-existing Line object.
 
 However, the colour property of the dimension segment should respected where possible.
 
-## Display of text
-The text values should be rendered in the manner of a billboard, such that the text is always facing straight onto the camera.
+### Display of measurement value
+The measurement values should be rendered in the manner of a billboard, such that the text is always facing straight onto the camera. This is to prevent the accidental reading of measurement values backwards, or even upside down, which could be the case for numbers 0, 1, 6, 8, and 9.
 
 Th size and font of text is down to individual tools that can choose what is appropriate depending on device size, resolution, camera zoom level, selected objects etc.
 
-## Levels of implementation
+The exact location of the text can also be chosen by the tool. It can be above, below, or within the line.
 
-There are many optional parts to allow for easy implementation. The approximate levels of implementation complexity are the following:
+For continuous or offset dimensions, the text should be roughly in the middle of the dimension line. For cumulative dimensions it should be between each end segment.
 
-1. Minimum level: Dimension line and value
-2. Extension lines: Dimension line and extension lines are shown
-3. Dimension Geometry: The dimension is aware of whether it is connected to a face, line or point.
-4. Associative: Using the reference_geometry_id the dimensions are attached to objects, and when the object moves, so does the dimension position and value.
+### Units
+In keeping with traditional dimensions on drawings, the units for metric measurements should NOT be shown by default.
 
-These are not formal levels but are intended as a guide for implementers.
-
-## Display of dimensions
-.
-
-## Display of dimension values
-The dimension value should always be rendered in the appropriate place.
-
-The exact location and display of the dimension value is left to the implementation.
-
-## Over-riding dimension lines and extension lines
-Implementers may override the exact 
-
-## Possible display scenarios
+Implementors are free to provide features to convert units and allow the user to display units.
