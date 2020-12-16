@@ -1,6 +1,6 @@
 ---
 created: 2020-12-05T08:08:06+00:00
-modified: 2020-12-05T23:40:46+00:00
+modified: 2020-12-16T18:59:06+00:00
 ---
 
 # API Design Explanation
@@ -15,6 +15,12 @@ For dimensions to make sense, you will often have parts of a model hidden to mak
 You also need to be careful to not have too many dimensions shown at the same time, so just like a sheet has multiple views of the same part with different dimensions, it follows a model should too.
 
 Therefore, dimensions are best kept per viewpoint.
+
+## Levels of complexity
+In order to ease implementation there are, there are many optional parts.
+
+### Minimum level
+Reads each segments DimensionLine and renders that between its start and end point, and shows the value in the middle.
 
 ## Dimensions property of a viewpoint
 This is an area that could be changed. Initially this spec has a dimensions property attached directly to the viewpoint object for simplicity.
@@ -33,7 +39,7 @@ However, this could be abused to the point that people over ride dimension value
 ## Dimension as a grouping object
 The simplest measurement is between two objects, however, to accommodate continuous, cumulative (chain), and baseline dimensions, there needs to be a grouping mechanism.
 
-Therefore a dimension has a GUID, and array of dimension segments. Each segment is made of two.
+Therefore a dimension has a GUID, and array of dimension segments. Each segment is made of two pieces of geometry.
 
 Possibly each DimensionSegment could have a GUID too. Worth considering.
 
