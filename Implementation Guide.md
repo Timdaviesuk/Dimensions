@@ -1,6 +1,6 @@
 ---
 created: 2020-12-16T18:59:08+00:00
-modified: 2020-12-16T20:56:16+00:00
+modified: 2020-12-16T21:02:14+00:00
 ---
 
 # Implementation Guide
@@ -23,7 +23,7 @@ Lines are to the exact same specification as the pre-existing Line object.
 However, the colour property of the dimension segment should respected where possible.
 
 ### Display of measurement value
-The measurement values should be rendered in the manner of a billboard, such that the text is always facing straight onto the camera. This is to prevent the accidental reading of measurement values backwards, or even upside down, which could be the case for numbers 0, 1, 6, 8, and 9.
+The measurement values should be rendered in the manner of a billboard, such that the text is always facing straight onto the camera. This is to prevent the accidental reading of measurement values back to front, or even upside down, which could be the case for numbers 0, 1, 6, 8, and 9.
 
 Th size and font of text is down to individual tools that can choose what is appropriate depending on device size, resolution, camera zoom level, selected objects etc.
 
@@ -32,6 +32,10 @@ The exact location of the text can also be chosen by the tool. It can be above, 
 For continuous or offset dimensions, the text should be roughly in the middle of the dimension line. For cumulative dimensions it should be between each end segment.
 
 ### Units
+In keeping with the current BCF standard, all units are in metric metres.
+
 In keeping with traditional dimensions on drawings, the units for metric measurements should NOT be shown by default.
 
-Implementors are free to provide features to convert units and allow the user to display units.
+Implementors may provide features to convert to different units and allow the user to display the unit in use.
+
+Implementors may also choose to round to decimal places or significant figures.
