@@ -1,5 +1,5 @@
 ---
-modified: 2020-12-04T14:52:21+00:00
+modified: 2020-12-17T18:44:22+00:00
 ---
 
 # Dimensions
@@ -11,6 +11,7 @@ Measurement dimensions are a critically important piece of construction informat
 Whether in the form of drawings, models, schedules, reports or other, the purpose of construction information is to communicate.
 
 To improve communication on drawings annotation is used. The following are common types of annotation:
+
 * Text: Display object data, including references to specifications and schedules, longer descriptive notes
 * Dimensions: Distance between parts of objects.
 * Tables: Such as schedules.
