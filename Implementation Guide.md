@@ -1,6 +1,6 @@
 ---
 created: 2020-12-16T18:59:08+00:00
-modified: 2020-12-17T18:12:28+00:00
+modified: 2020-12-17T18:43:52+00:00
 ---
 
 # Implementation Guide
@@ -33,7 +33,7 @@ For continuous or offset dimensions, the text should be roughly in the middle of
 
 For cumulative dimensions it should be between each end segment.
 
-### Units
+## Units
 In keeping with the current BCF standard, all units are in metric metres.
 
 The units for metric measurements should NOT be shown by default.
