@@ -1,6 +1,6 @@
 ---
 created: 2020-12-16T18:59:08+00:00
-modified: 2020-12-16T21:02:14+00:00
+modified: 2020-12-17T18:12:28+00:00
 ---
 
 # Implementation Guide
@@ -29,13 +29,15 @@ Th size and font of text is down to individual tools that can choose what is app
 
 The exact location of the text can also be chosen by the tool. It can be above, below, or within the line.
 
-For continuous or offset dimensions, the text should be roughly in the middle of the dimension line. For cumulative dimensions it should be between each end segment.
+For continuous or offset dimensions, the text should be roughly in the middle of the dimension line.
+
+For cumulative dimensions it should be between each end segment.
 
 ### Units
 In keeping with the current BCF standard, all units are in metric metres.
 
-In keeping with traditional dimensions on drawings, the units for metric measurements should NOT be shown by default.
+The units for metric measurements should NOT be shown by default.
 
-Implementors may provide features to convert to different units and allow the user to display the unit in use.
+Implementors may provide features to convert to different units and allow the user to display the units.
 
 Implementors may also choose to round to decimal places or significant figures.
